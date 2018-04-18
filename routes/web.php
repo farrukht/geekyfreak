@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::view('/news', 'news');
-Route::view('/comics', 'comics');
-Route::view('/manga', 'manga');
-Route::view('/movies', 'movies');
-Route::view('/contacts', 'contacts');
+Route::get('/', 'PagesController@index'); 
+Route::get('/news', 'PagesController@news'); 
+Route::get('/comics', 'PagesController@comics'); 
+Route::get('/manga', 'PagesController@manga'); 
+Route::get('/movies', 'PagesController@movies'); 
+Route::get('/contacts','PagesController@contacts');
+
+// Route::view('/', 'news');
+// Route::view('/', 'comics');
+// Route::view('/', 'manga');
+// Route::view('/', 'movies');
+// Route::view('/', 'contacts');
